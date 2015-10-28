@@ -21,11 +21,23 @@ font-weight: normal;
 width: 450px;
 float: right;
 margin-right: 15px;
-  height: 130px;
-  line-height: 130px;
+height: 130px;
+line-height: 130px;
 display: block;
 }
+@media only screen and (max-width: 551px){
+  .intro-text header {
+    display: none;
 
+  }
+}
+@media only screen and (max-width: 991px){
+  .intro-text header{
+    float:none;
+    width:100%;
+    height:auto;
+  }
+}
 .intro-text header a {
 text-decoration: underline;
 color: #fff;
@@ -39,11 +51,28 @@ color: #fff;
 .intro-text header p {
 display: inline-block;
  vertical-align: middle;
-  line-height: 140%;      
+  line-height: 140%;
 }
 
 .intro-image img {
    margin-top: 20px;
+}
+
+@media only screen and (max-width:991px){
+  .intro-image img{
+    margin-top:0px;
+    padding-top:0px;
+  }
+}
+
+@media only screen and (max-width:551px){
+  .intro-image img{
+    width:80%;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+
+  }
 }
 .masonry .media-image, .masonry .media-heading {
 display: block;
@@ -192,6 +221,13 @@ body {
 
 .site-footer {
 	background: #363636 url("/base/images/bg.png");
+}
+
+@media only screen and (max-width:768px) {
+  .site-footer .row{
+    margin-left:50px;
+  }
+
 }
 
 .resource-item {

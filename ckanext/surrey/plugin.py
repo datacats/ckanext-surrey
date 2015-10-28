@@ -40,20 +40,16 @@ class SurreyFacetPlugin(plugins.SingletonPlugin):
         default_facet_titles = {
                     'groups': tk._('Categories'),
                     'tags': tk._('Tags'),
-                    'res_format': tk._('Formats')
+                    'res_format': tk._('Formats'),
                     #'license_id': tk._('License'),
                     }
         return default_facet_titles
 
     def group_facets(self, facets_dict, group_type, package_type):
 
-        default_facet_titles = {
-                    'groups': tk._('Categories'),
-                    'tags': tk._('Tags'),
-                    'res_format': tk._('Formats')
-                    #'license_id': tk._('License'),
-                    }
-        return default_facet_titles
+        facets_dict.pop('license_id')
+        facets_dict.pop('organization')
+        return facets_dict
 
 class SurreyExtraPagesPlugin(plugins.SingletonPlugin):
 
